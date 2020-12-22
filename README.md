@@ -14,11 +14,14 @@ This tutorial will show you how to build your own Discord bot completely in the 
 
 <br>
 
-Make a lockedsecret.py file with your bot-token.  Use the EXAMPLE file as a guide. 
+Make a lockedsecret.py file with your bot-token and utilities.  Use the EXAMPLE file as a guide. 
 ```
 // lockedsecret.py file
 
-token = "abcdefghijklmnopqrstuvwxyz1234567890"
+TOKEN = "abcdefghijklmnopqrstuvwxyz"
+GAME="Chess"
+TVSHOW="Friends"
+MUSIC="Drake"
 
 ```
 
@@ -55,10 +58,30 @@ Copy that whole thing (with the < and >) and paste that in the response text tha
 
 <br>
 
-Bots pretty much ignore bots to prevent endless loops of death (<a href="https://www.reddit.com/r/discordapp/comments/5j0pnv/discord_net_bot_talking_to_another_bot/">LINK</a>)):
+Bots pretty much ignore bots to prevent endless loops of death (<a href="https://www.reddit.com/r/discordapp/comments/5j0pnv/discord_net_bot_talking_to_another_bot/">LINK</a>):
 
 ```
 Erisbot is likely ignoring the message by checking if it's sent from a bot. Bot to bot interactions should be avoided because it can cause loops of bots just replying to each other.
 
 just going to have to code your own features :) 
+```
+
+<br>
+
+To set custom status messages for your bot - use client.change_presence (<a href="https://medium.com/python-in-plain-english/how-to-change-discord-bot-status-with-discord-py-39219c8fceea">LINK</a>):
+
+```
+// Main.py (Line 15)
+
+// Gaming
+await client.change_presence(activity=discord.Game('Rainbow 6 Siege'))
+
+// Streaming
+await client.change_presence(activity=discord.Streaming(name='Roblox', url='https://www.twitch.tv/your_channel'))
+
+// Watching
+await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name='The Office'))
+
+// Listening 
+await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='Kids See Ghosts'))
 ```
