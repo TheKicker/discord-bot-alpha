@@ -34,6 +34,11 @@ Discord API Dependency
 pip install discord 
 ```
 
+US Holidays Dependency 
+```
+pip install holidays 
+```
+
 <br>
 
 
