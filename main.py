@@ -21,9 +21,10 @@ def get_quote():
 
 
 def get_roast():
-    response = requests.get("https://insult.mattbas.org/api/insult?who={0}".format(""))
-    message = response.content.decode("utf-8")
-    return message
+    response = requests.get("https://evilinsult.com/generate_insult.php?lang=en&type=json")
+    json_data = json.loads(response.text)
+    roast = json_data['insult']
+    return(roast)
 
 
 # Detect Holiday
