@@ -14,14 +14,16 @@ This tutorial will show you how to build your own Discord bot completely in the 
 
 <br>
 
-Make a lockedsecret.py file with your bot-token and utilities.  Use the EXAMPLE file as a guide. 
+Make an env file with your bot-token and utilities.  Use the EXAMPLE file as a guide. 
 ```
-// lockedsecret.py file
+// .env file
 
-TOKEN = "abcdefghijklmnopqrstuvwxyz"
-GAME="Chess"
-TVSHOW="Friends"
-MUSIC="Drake"
+TOKEN = "your-token-goes-here-1A2B3C4D5E6FG7H8"
+GAME = "Chess"
+TVSHOW = "Friends"
+MUSIC = "Kanye West"
+NASA = "your-specific-nasa-api-key-here-1A2B3C4D5E6FG7H8"
+apodCHAN = "your-APOD-channel-in-your-Discord-123456789"
 
 ```
 
@@ -39,6 +41,10 @@ US Holidays Dependency
 pip install holidays 
 ```
 
+Schedule Dependency 
+```
+pip install schedule
+```
 <br>
 
 

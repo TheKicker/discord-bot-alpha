@@ -1,0 +1,6 @@
+TOKEN = "your-token-goes-here-1A2B3C4D5E6FG7H8"
+GAME = "Chess"
+TVSHOW = "Friends"
+MUSIC = "Kanye West"
+NASA = "your-specific-nasa-api-key-here-1A2B3C4D5E6FG7H8"
+apodCHAN = "your-APOD-channel-in-your-Discord-123456789"
